@@ -60,7 +60,10 @@ body {
 
 /* Hero section (accueil) */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-color: #667eea;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: white;
     padding: 6rem 0;
     text-align: center;
@@ -187,6 +190,25 @@ body {
 .testimonial-author {
     font-weight: bold;
     color: #3498db;
+}
+
+.testimonials .carousel {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+.testimonials .carousel-item .testimonial-card {
+    margin: 0 auto;
+}
+
+.testimonials .carousel-control-prev-icon,
+.testimonials .carousel-control-next-icon {
+    filter: invert(1) grayscale(100);
+}
+
+.testimonials .carousel-indicators [data-bs-target] {
+    background-color: #3498db;
 }
 
 /* Destinations */

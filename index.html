@@ -4,30 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VoyageAventure - Accueil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header class="site-header">
-        <div class="container">
-            <h1 class="logo">🌍 VoyageAventure</h1>
-            <nav class="main-nav">
-                <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link active">Accueil</a></li>
-                    <li><a href="destinations.html" class="nav-link">Destinations</a></li>
-                    <li><a href="apropos.html" class="nav-link">À propos</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+
+    
+
+         <nav class="navbar navbar-expand-lg navbar-#333 bg-#333">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">🌍 VoyageAventure</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="destinations.html">Destinations</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="apropos.html">À propos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
     </header>
 
-    <section class="hero">
+   
+
+    <section class="hero img-background" style="background-image: url('images/bg-hero.jpg');">
         <div class="container">
             <div class="hero-content">
                 <h2 class="hero-title">Explorez le monde avec nous</h2>
                 <p class="hero-subtitle">Découvrez des destinations extraordinaires et créez des souvenirs inoubliables</p>
-                <button class="cta-button">Découvrir nos voyages</button>
+                <button class="cta-button"  >  <a href="destinations.html" class="cta-link">Découvrir nos voyages</a></button>
             </div>
+
         </div>
     </section>
 
@@ -57,15 +79,33 @@
     <section class="testimonials">
         <div class="container">
             <h2 class="section-title">Ils nous font confiance</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Un voyage fantastique en Asie ! L'équipe a été aux petits soins."</p>
-                    <p class="testimonial-author">- Marie D.</p>
+            <div id="testimonialsCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Témoignage 1"></button>
+                    <button type="button" data-bs-target="#testimonialsCarousel" data-bs-slide-to="1" aria-label="Témoignage 2"></button>
                 </div>
-                <div class="testimonial-card">
-                    <p class="testimonial-text">"Service impeccable, je recommande vivement !"</p>
-                    <p class="testimonial-author">- Pierre L.</p>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">"Un voyage fantastique en Asie ! L'équipe a été aux petits soins."</p>
+                            <p class="testimonial-author">- Marie D.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="testimonial-card">
+                            <p class="testimonial-text">"Service impeccable, je recommande vivement !"</p>
+                            <p class="testimonial-author">- Pierre L.</p>
+                        </div>
+                    </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Précédent</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialsCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Suivant</span>
+                </button>
             </div>
         </div>
     </section>
