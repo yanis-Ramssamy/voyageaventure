@@ -309,12 +309,6 @@ body {
     padding: 4rem 0;
 }
 
-.contact-content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-}
-
 .contact-info h2 {
     margin-bottom: 2rem;
     color: #2c3e50;
@@ -577,11 +571,6 @@ body {
     .testimonials-grid {
         flex-direction: column;
         align-items: center;
-    }
-
-    .contact-content {
-        grid-template-columns: 1fr;
-        gap: 2rem;
     }
 
     .story-content {
