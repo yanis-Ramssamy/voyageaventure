@@ -1,142 +1,315 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VoyageAventure - Destinations</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <header class="site-header">
-        <div class="container">
-            <h1 class="logo">🌍 VoyageAventure</h1>
-            <nav class="main-nav">
-                <ul class="nav-list">
-                    <li><a href="index.html" class="nav-link">Accueil</a></li>
-                    <li><a href="destinations.html" class="nav-link active">Destinations</a></li>
-                    <li><a href="apropos.html" class="nav-link">À propos</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                </ul>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>VoyageAventure - Destinations</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="icon" type="image/jpg" href="images/logo-site.jpg">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <header class="site-header">
+
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-white" href="index.html">🌍 VoyageAventure</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="index.html">Accueil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active text-white" aria-current="page" href="destinations.html">Destinations</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="apropos.html">À propos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="contact.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
-        </div>
-    </header>
+        </header>
 
-    <section class="page-header">
-        <div class="container">
-            <h1 class="page-title">Nos destinations</h1>
-            <p class="page-subtitle">Explorez les merveilles du monde</p>
-        </div>
-    </section>
+        <section class="page-header">
+            <div class="container">
+                <h1 class="page-title">Nos destinations</h1>
+                <p class="page-subtitle">Explorez les merveilles du monde</p>
+            </div>
+        </section>
 
-    <section class="destinations">
-        <div class="container">
-            <div class="filters">
-                <h3>Filtrer par continent</h3>
-                <div class="filter-buttons">
-                    <button class="filter-btn active">Tous</button>
-                    <button class="filter-btn">Europe</button>
-                    <button class="filter-btn">Asie</button>
-                    <button class="filter-btn">Amérique</button>
-                    <button class="filter-btn">Afrique</button>
+        <section class="destinations">
+            <div class="container">
+                <div class="filters">
+                    <h3>Filtrer par continent</h3>
+                    <div class="filter-buttons">
+                        <button type="button" class="btn btn-primary">Tous</button>
+                        <button type="button" class="btn btn-secondary">Europe</button>
+                        <button type="button" class="btn btn-secondary">Asie</button>
+                        <button type="button" class="btn btn-secondary">Amérique</button>
+                        <button type="button" class="btn btn-secondary">Afrique</button>
+                        <div class="dropdown">
+                            <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Filtre par prix
+                            </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Prix croissant</a></li>
+                                    <li><a class="dropdown-item" href="#">Prix décroissant</a></li>
+                                    <li><a class="dropdown-item" href="#">Prix moyen</a></li>
+                                </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="container text-center">
+                    
+                    <div class="row">
+                        <div class="col">
+                            <div class="card" style="width: 18rem;" data-continent="europe">
+                                <img src="..." class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Paris, France</h5>
+                                    <p class="card-text">La ville lumière vous attend</p>
+                                    <p>
+                                        <span class="badge text-bg-secondary">7 jours</span>
+                                        <span class="badge text-bg-danger">À partir de 599€</span>
+                                    </p>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalParis">Voir détails</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="card" style="width: 18rem;" data-continent="asie">
+                                <img src="..." class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Tokyo, Japon</h5>
+                                    <p class="card-text">Tradition et modernité</p>
+                                    <p>
+                                        <span class="badge text-bg-secondary">10 jours</span>
+                                        <span class="badge text-bg-danger">À partir de 1299€</span>
+                                    </p>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalTokyo">Voir détails</button>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col">
+                            <div class="card" style="width: 18rem;" data-continent="amerique">
+                                    <img src="..." class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">New York, USA</h5>
+                                        <p class="card-text">La ville qui ne dort jamais</p>
+                                        <p>
+                                            <span class="badge text-bg-secondary">5 jours</span>
+                                            <span class="badge text-bg-danger">À partir de 899€</span>
+                                        </p>
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalNewYork">Voir détails</button>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card" style="width: 18rem;" data-continent="afrique">
+                                <img src="..." class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Safari Kenya</h5>
+                                    <p class="card-text">Au cœur de la savane</p>
+                                    <p>
+                                        <span class="badge text-bg-secondary">12 jours</span>
+                                        <span class="badge text-bg-danger">À partir de 1899€</span>
+                                    </p>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalKenya">Voir détails</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                        <div class="card" style="width: 18rem;" data-continent="europe">
+                            <img src="..." class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Rome, Italie</h5>
+                                    <p class="card-text">La ville éternelle</p>
+                                    <p>
+                                        <span class="badge text-bg-secondary">6 jours</span>
+                                        <span class="badge text-bg-danger">À partir de 499€</span>
+                                    </p>
+                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalRome">Voir détails</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                        <div class="card" style="width: 18rem;" data-continent="asie">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">Bali, Indonésie</h5>
+                                <p class="card-text">Paradis tropical</p>
+                                <p>
+                                    <span class="badge text-bg-secondary">14 jours</span>
+                                    <span class="badge text-bg-danger">À partir de 999€</span>
+                                </p>
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalBali">Voir détails</button>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="modalParis" tabindex="-1" aria-labelledby="modalParisLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalParisLabel">Paris, France</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>La ville lumière vous attend</p>
+                                <p>
+                                    <span class="badge text-bg-secondary">7 jours</span>
+                                    <span class="badge text-bg-danger">À partir de 599€</span>
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                                <a href="#" class="btn btn-primary">Réserver</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="modalTokyo" tabindex="-1" aria-labelledby="modalTokyoLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalTokyoLabel">Tokyo, Japon</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Tradition et modernité</p>
+                                <p>
+                                    <span class="badge text-bg-secondary">10 jours</span>
+                                    <span class="badge text-bg-danger">À partir de 1299€</span>
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                                <a href="#" class="btn btn-primary">Réserver</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="modalNewYork" tabindex="-1" aria-labelledby="modalNewYorkLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalNewYorkLabel">New York, USA</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>La ville qui ne dort jamais</p>
+                                <p>
+                                    <span class="badge text-bg-secondary">5 jours</span>
+                                    <span class="badge text-bg-danger">À partir de 899€</span>
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                                <a href="#" class="btn btn-primary">Réserver</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="modalKenya" tabindex="-1" aria-labelledby="modalKenyaLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalKenyaLabel">Safari Kenya</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Au cœur de la savane</p>
+                                <p>
+                                    <span class="badge text-bg-secondary">12 jours</span>
+                                    <span class="badge text-bg-danger">À partir de 1899€</span>
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                                <a href="#" class="btn btn-primary">Réserver</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="modalRome" tabindex="-1" aria-labelledby="modalRomeLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalRomeLabel">Rome, Italie</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>La ville éternelle</p>
+                                <p>
+                                    <span class="badge text-bg-secondary">6 jours</span>
+                                    <span class="badge text-bg-danger">À partir de 499€</span>
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                                <a href="#" class="btn btn-primary">Réserver</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="modalBali" tabindex="-1" aria-labelledby="modalBaliLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="modalBaliLabel">Bali, Indonésie</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Paradis tropical</p>
+                                <p>
+                                    <span class="badge text-bg-secondary">14 jours</span>
+                                    <span class="badge text-bg-danger">À partir de 999€</span>
+                                </p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                                <a href="#" class="btn btn-primary">Réserver</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="destinations-grid">
-                <div class="destination-card" data-continent="europe">
-                    <div class="destination-image">🏰</div>
-                    <div class="destination-content">
-                        <h3 class="destination-title">Paris, France</h3>
-                        <p class="destination-description">La ville lumière vous attend</p>
-                        <div class="destination-details">
-                            <span class="duration">7 jours</span>
-                            <span class="price">À partir de 599€</span>
-                        </div>
-                        <button class="destination-btn">Voir détails</button>
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>VoyageAventure</h3>
+                        <p>Votre partenaire voyage depuis 2015</p>
                     </div>
-                </div>
-
-                <div class="destination-card" data-continent="asie">
-                    <div class="destination-image">🏯</div>
-                    <div class="destination-content">
-                        <h3 class="destination-title">Tokyo, Japon</h3>
-                        <p class="destination-description">Tradition et modernité</p>
-                        <div class="destination-details">
-                            <span class="duration">10 jours</span>
-                            <span class="price">À partir de 1299€</span>
-                        </div>
-                        <button class="destination-btn">Voir détails</button>
-                    </div>
-                </div>
-
-                <div class="destination-card" data-continent="amerique">
-                    <div class="destination-image">🗽</div>
-                    <div class="destination-content">
-                        <h3 class="destination-title">New York, USA</h3>
-                        <p class="destination-description">La ville qui ne dort jamais</p>
-                        <div class="destination-details">
-                            <span class="duration">5 jours</span>
-                            <span class="price">À partir de 899€</span>
-                        </div>
-                        <button class="destination-btn">Voir détails</button>
-                    </div>
-                </div>
-
-                <div class="destination-card" data-continent="afrique">
-                    <div class="destination-image">🦁</div>
-                    <div class="destination-content">
-                        <h3 class="destination-title">Safari Kenya</h3>
-                        <p class="destination-description">Au cœur de la savane</p>
-                        <div class="destination-details">
-                            <span class="duration">12 jours</span>
-                            <span class="price">À partir de 1899€</span>
-                        </div>
-                        <button class="destination-btn">Voir détails</button>
-                    </div>
-                </div>
-
-                <div class="destination-card" data-continent="europe">
-                    <div class="destination-image">🏛️</div>
-                    <div class="destination-content">
-                        <h3 class="destination-title">Rome, Italie</h3>
-                        <p class="destination-description">La ville éternelle</p>
-                        <div class="destination-details">
-                            <span class="duration">6 jours</span>
-                            <span class="price">À partir de 499€</span>
-                        </div>
-                        <button class="destination-btn">Voir détails</button>
-                    </div>
-                </div>
-
-                <div class="destination-card" data-continent="asie">
-                    <div class="destination-image">🕌</div>
-                    <div class="destination-content">
-                        <h3 class="destination-title">Bali, Indonésie</h3>
-                        <p class="destination-description">Paradis tropical</p>
-                        <div class="destination-details">
-                            <span class="duration">14 jours</span>
-                            <span class="price">À partir de 999€</span>
-                        </div>
-                        <button class="destination-btn">Voir détails</button>
+                    <div class="footer-section">
+                        <h3>Contact</h3>
+                        <p>📧 info@voyageaventure.fr</p>
+                        <p>📞 01 23 45 67 89</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <footer class="site-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>VoyageAventure</h3>
-                    <p>Votre partenaire voyage depuis 2015</p>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact</h3>
-                    <p>📧 info@voyageaventure.fr</p>
-                    <p>📞 01 23 45 67 89</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-</body>
+        </footer>
+    </body>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </html>
