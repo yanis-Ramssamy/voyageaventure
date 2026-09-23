@@ -14,25 +14,25 @@
 
     
 
-         <nav class="navbar navbar-expand-lg navbar-#333 bg-#333">
+         <nav class="navbar navbar-expand-lg navbar-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">🌍 VoyageAventure</a>
+    <a class="navbar-brand text-white" href="index.html">🌍 VoyageAventure</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.html">Accueil</a>
+          <a class="nav-link active text-white" aria-current="page" href="index.html">Accueil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="destinations.html">Destinations</a>
+          <a class="nav-link text-white" href="destinations.html">Destinations</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="apropos.html">À propos</a>
+          <a class="nav-link text-white" href="apropos.html">À propos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
+          <a class="nav-link text-white" href="contact.html">Contact</a>
         </li>
       </ul>
     </div>
@@ -47,7 +47,7 @@
             <div class="hero-content">
                 <h2 class="hero-title">Explorez le monde avec nous</h2>
                 <p class="hero-subtitle">Découvrez des destinations extraordinaires et créez des souvenirs inoubliables</p>
-                <button class="cta-button"  >  <a href="destinations.html" class="cta-link">Découvrir nos voyages</a></button>
+                <a href="destinations.html" class="cta-button">Découvrir nos voyages</a>
             </div>
 
         </div>
@@ -56,21 +56,33 @@
     <section class="services">
         <div class="container">
             <h2 class="section-title">Nos services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">✈️</div>
-                    <h3 class="service-title">Voyages organisés</h3>
-                    <p class="service-description">Des circuits complets avec guide professionnel</p>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card service-card h-100 text-center">
+                        <div class="card-body">
+                            <div class="service-icon">✈️</div>
+                            <h3 class="card-title service-title">Voyages organisés</h3>
+                            <p class="card-text service-description">Des circuits complets avec guide professionnel</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">🏨</div>
-                    <h3 class="service-title">Réservations</h3>
-                    <p class="service-description">Hôtels et hébergements sélectionnés</p>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card service-card h-100 text-center">
+                        <div class="card-body">
+                            <div class="service-icon">🏨</div>
+                            <h3 class="card-title service-title">Réservations</h3>
+                            <p class="card-text service-description">Hôtels et hébergements sélectionnés</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">🎒</div>
-                    <h3 class="service-title">Voyages sur mesure</h3>
-                    <p class="service-description">Des expériences personnalisées selon vos envies</p>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card service-card h-100 text-center">
+                        <div class="card-body">
+                            <div class="service-icon">🎒</div>
+                            <h3 class="card-title service-title">Voyages sur mesure</h3>
+                            <p class="card-text service-description">Des expériences personnalisées selon vos envies</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
