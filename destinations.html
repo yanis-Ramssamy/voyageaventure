@@ -50,11 +50,11 @@
                 <div class="filters">
                     <h3>Filtrer par continent</h3>
                     <div class="filter-buttons">
-                        <button type="button" class="btn btn-primary">Tous</button>
-                        <button type="button" class="btn btn-secondary">Europe</button>
-                        <button type="button" class="btn btn-secondary">Asie</button>
-                        <button type="button" class="btn btn-secondary">Amérique</button>
-                        <button type="button" class="btn btn-secondary">Afrique</button>
+                        <button type="button" class="btn btn-primary" data-filter="tous">Tous</button>
+                        <button type="button" class="btn btn-secondary" data-filter="europe">Europe</button>
+                        <button type="button" class="btn btn-secondary" data-filter="asie">Asie</button>
+                        <button type="button" class="btn btn-secondary" data-filter="amerique">Amérique</button>
+                        <button type="button" class="btn btn-secondary" data-filter="afrique">Afrique</button>
                         <div class="dropdown">
                             <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Filtre par prix
@@ -73,7 +73,7 @@
                     <div class="row">
                         <div class="col">
                             <div class="card" style="width: 18rem;" data-continent="europe">
-                                <img src="..." class="card-img-top" alt="...">
+                                <img src="" class="card-img-top" alt="">
                                 <div class="card-body">
                                     <h5 class="card-title">Paris, France</h5>
                                     <p class="card-text">La ville lumière vous attend</p>
@@ -87,7 +87,7 @@
                         </div>
                         <div class="col-4">
                             <div class="card" style="width: 18rem;" data-continent="asie">
-                                <img src="..." class="card-img-top" alt="...">
+                                <img src="" class="card-img-top" alt="">
                                 <div class="card-body">
                                     <h5 class="card-title">Tokyo, Japon</h5>
                                     <p class="card-text">Tradition et modernité</p>
@@ -102,7 +102,7 @@
                         </div>
                         <div class="col">
                             <div class="card" style="width: 18rem;" data-continent="amerique">
-                                    <img src="..." class="card-img-top" alt="...">
+                                    <img src="" class="card-img-top" alt="">
                                     <div class="card-body">
                                         <h5 class="card-title">New York, USA</h5>
                                         <p class="card-text">La ville qui ne dort jamais</p>
@@ -118,7 +118,7 @@
                     <div class="row">
                         <div class="col">
                             <div class="card" style="width: 18rem;" data-continent="afrique">
-                                <img src="..." class="card-img-top" alt="...">
+                                <img src="" class="card-img-top" alt="">
                                 <div class="card-body">
                                     <h5 class="card-title">Safari Kenya</h5>
                                     <p class="card-text">Au cœur de la savane</p>
@@ -132,7 +132,7 @@
                         </div>
                         <div class="col-4">
                         <div class="card" style="width: 18rem;" data-continent="europe">
-                            <img src="..." class="card-img-top" alt="...">
+                            <img src="" class="card-img-top" alt="">
                                 <div class="card-body">
                                     <h5 class="card-title">Rome, Italie</h5>
                                     <p class="card-text">La ville éternelle</p>
@@ -146,7 +146,7 @@
                         </div>
                         <div class="col">
                         <div class="card" style="width: 18rem;" data-continent="asie">
-                            <img src="..." class="card-img-top" alt="...">
+                            <img src="" class="card-img-top" alt="">
                             <div class="card-body">
                                 <h5 class="card-title">Bali, Indonésie</h5>
                                 <p class="card-text">Paradis tropical</p>
@@ -312,4 +312,29 @@
         </footer>
     </body>
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const filterButtons = document.querySelectorAll('.filter-buttons [data-filter]');
+            const cards = document.querySelectorAll('.destinations [data-continent]');
+
+            filterButtons.forEach(function (button) {
+                button.addEventListener('click', function () {
+                    const filter = button.dataset.filter;
+
+                    filterButtons.forEach(function (btn) {
+                        btn.classList.remove('btn-primary');
+                        btn.classList.add('btn-secondary');
+                    });
+                    button.classList.remove('btn-secondary');
+                    button.classList.add('btn-primary');
+
+                    cards.forEach(function (card) {
+                        const col = card.closest('.col, .col-4');
+                        const match = filter === 'tous' || card.dataset.continent === filter;
+                        col.style.display = match ? '' : 'none';
+                    });
+                });
+            });
+        });
+    </script>
 </html>
